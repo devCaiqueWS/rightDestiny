@@ -2,6 +2,61 @@ Banco de Dados — RightDestiny
 
 PostgreSQL (Neon). Migrations em `db/migrations.sql`.
 
+Diagrama ER (Mermaid)
+```mermaid
+erDiagram
+  users ||--o{ favorites : has
+  hotels ||--o{ hotel_options : has
+
+  users {
+    UUID id PK
+    TEXT email UK
+    TEXT password_hash
+    TEXT name
+    TIMESTAMPTZ created_at
+  }
+
+  favorites {
+    UUID id PK
+    UUID user_id FK
+    TEXT item_key
+    TEXT item_type
+    TEXT title
+    TEXT url
+    TEXT image_url
+    TIMESTAMPTZ created_at
+  }
+
+  search_logs {
+    UUID id PK
+    TEXT query_text
+    TEXT cidade
+    TIMESTAMPTZ created_at
+  }
+
+  hotels {
+    UUID id PK
+    TEXT slug UK
+    TEXT name
+    TEXT city
+    TEXT country
+    TEXT image_url
+    TIMESTAMPTZ created_at
+  }
+
+  hotel_options {
+    UUID id PK
+    UUID hotel_id FK
+    TEXT title
+    TEXT description
+    NUMERIC price
+    TEXT currency
+    INT capacity
+    TEXT image_url
+    TIMESTAMPTZ created_at
+  }
+```
+
 Extensões
 - `pgcrypto` — para `gen_random_uuid()`
 
@@ -76,4 +131,3 @@ Ambiente (.env)
 - `PGCHANNELBINDING=require`
 - `JWT_SECRET` — segredo do JWT (altere em produção)
 - `JWT_EXPIRES_IN=7d` — expiração do token
-
