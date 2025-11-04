@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RightDestiny</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+	<!-- Estilos e bibliotecas externas -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <!-- Navbar (menu superior) -->  
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">RightDestiny.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+		  <!-- Links do menu -->		
+          <li class="nav-item active"><a href="index.html" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="tour.html" class="nav-link">Viagens</a></li>
+          <li class="nav-item"><a href="hotel.html" class="nav-link">Hotéis</a></li>
+		  <!-- Ícone de favoritos -->
+          <li class="nav-item" id="menu-favoritos" style="display:flex; align-items:center; justify-content:center;">
+			<a href="favoritos.html" class="nav-link" title="Favoritos">
+				<i class="icon-heart" style="font-size:20px; color:#ff4b5c;"></i>
+			</a>
+          </li>
+		  <li class="nav-item cta" style="display:flex; gap:4px; align-items: center; justify-content: center;" id="menu-login"><a href="login.html" class="nav-link" ><span>Login</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Seção de destaque (hero section) com imagem de fundo -->
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/destination-1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+            <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Início</a></span> <span>Viagens</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Paris</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <style>
+    /* Layout dos cards */
+    .info-card {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Imagem pequena à esquerda */
+    .card-img {
+      width: 120px;
+      height: 90px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    /* Conteúdo principal */
+    .card-content {
+      flex: 1;
+    }
+
+    .card-title {
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 5px;
+    }
+
+    .card-desc {
+      font-family: Arial, sans-serif;
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 8px;
+    }
+
+    .card-price {
+      font-family: Arial, sans-serif;
+      font-size: 17px;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    /* Controle de quantidade à direita */
+    .quantity-control {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15px;
+    }
+    .quantity-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 32px;
+      height: 32px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .quantity-btn:hover {
+      background-color: #0056b3;
+    }
+    .quantity-input {
+      width: 50px;
+      text-align: center;
+      font-size: 16px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      height: 32px;
+    }
+
+    /* Calculadora */
+    .calculator {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
+    }
+    .calc-title {
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    .calc-result {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      color: #007bff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Seção -->
+<section class="ftco-section bg-light py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <h2 style="font-family: Arial, sans-serif; font-weight: bold;">Hotéis e Restaurantes em Paris</h2>
+      <p style="font-family: Arial, sans-serif; font-size: 16px;">Encontre os melhores lugares para se hospedar e saborear em Paris.</p>
+    </div>
+
+    <!-- 🔹 Título da seção de Hotéis -->
+    <h3 style="font-family: Arial, sans-serif; font-weight: bold; color: #333; text-align: left; margin-bottom: 20px;">
+      🏨 Hotéis
+    </h3>
+
+    <!-- Hotel 1 -->
+    <div class="info-card" data-price="800">
+      <img src="images/Paris1HotelRitz.png" alt="Hotel Ritz Paris" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">Hotel Ritz Paris</h3>
+        <p class="card-desc">Um dos hotéis mais icônicos do mundo, com luxo incomparável e vista para a Place Vendôme.</p>
+        <p class="card-price">Preço: R$800 / noite</p>
+      </div>
+      <div class="quantity-control">
+        <button class="quantity-btn" onclick="changeQty(this, 1)">+</button>
+        <input type="number" class="quantity-input" value="0" min="0">
+        <button class="quantity-btn" onclick="changeQty(this, -1)">−</button>
+      </div>
+    </div>
+
+    <!-- Hotel 2 -->
+    <div class="info-card" data-price="400">
+      <img src="images/Paris1HotelLeMeurice.png" alt="Le Meurice" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">Le Meurice</h3>
+        <p class="card-desc">Hotel 5 estrelas com design artístico e culinária premiada, próximo ao Museu do Louvre.</p>
+        <p class="card-price">Preço: R$400 / noite</p>
+      </div>
+      <div class="quantity-control">
+        <button class="quantity-btn" onclick="changeQty(this, 1)">+</button>
+        <input type="number" class="quantity-input" value="0" min="0">
+        <button class="quantity-btn" onclick="changeQty(this, -1)">−</button>
+      </div>
+    </div>
+
+    <!-- 🔸 Linha divisória -->
+    <hr style="border: 0.5px solid #ddd; margin: 40px 0;">
+
+    <!-- 🔹 Título da seção de Restaurantes -->
+    <h3 style="font-family: Arial, sans-serif; font-weight: bold; color: #333; text-align: left; margin-bottom: 20px;">
+      🍽️ Restaurantes
+    </h3>
+
+    <!-- Restaurante 1 -->
+    <div class="info-card" data-price="90">
+      <img src="images/Paris1RestauLeJules.png" alt="Le Jules Verne" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">Le Jules Verne</h3>
+        <p class="card-desc">Restaurante dentro da Torre Eiffel, com vista panorâmica e gastronomia francesa sofisticada.</p>
+        <p class="card-price">Preço médio: R$90 / pessoa</p>
+      </div>
+      <div class="quantity-control">
+        <button class="quantity-btn" onclick="changeQty(this, 1)">+</button>
+        <input type="number" class="quantity-input" value="0" min="0">
+        <button class="quantity-btn" onclick="changeQty(this, -1)">−</button>
+      </div>
+    </div>
+
+    <!-- Restaurante 2 -->
+    <div class="info-card" data-price="40">
+      <img src="images/Paris1RestauCaféFlore.png" alt="Café de Flore" class="card-img">
+      <div class="card-content">
+        <h3 class="card-title">Café de Flore</h3>
+        <p class="card-desc">Um dos cafés mais tradicionais de Paris, perfeito para um café e croissant ao estilo parisiense.</p>
+        <p class="card-price">Preço médio: R$40 / pessoa</p>
+      </div>
+      <div class="quantity-control">
+        <button class="quantity-btn" onclick="changeQty(this, 1)">+</button>
+        <input type="number" class="quantity-input" value="0" min="0">
+        <button class="quantity-btn" onclick="changeQty(this, -1)">−</button>
+      </div>
+    </div>
+
+    <!-- Calculadora agora embaixo -->
+    <div class="calculator text-center">
+      <h3 class="calc-title">💰 Total Estimado</h3>
+      <p>Valor aproximado da sua estadia e refeições em Paris:</p>
+      <p id="totalPrice" class="calc-result">R$ 0,00</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Script -->
+<script>
+  function changeQty(btn, value) {
+    const input = btn.parentElement.querySelector('.quantity-input');
+    const current = parseInt(input.value);
+    const newVal = current + value;
+    if (newVal >= 0) input.value = newVal;
+    updateTotal();
+  }
+
+  function updateTotal() {
+    let total = 0;
+    document.querySelectorAll('.info-card').forEach(card => {
+      const price = parseFloat(card.dataset.price);
+      const qty = parseInt(card.querySelector('.quantity-input').value);
+      total += price * qty;
+    });
+
+    document.getElementById('totalPrice').textContent =
+      total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+  }
+</script>
+
+<!-- Início do rodapé -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Rightdestiny</h2>
+              <p>Seu guia para as melhores viagens, hotéis e experiências. Seu destino começa aqui.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+				<!-- Adicionar a logo do intagram -->
+                <li class="ftco-animate"><a href="https://www.instagram.com/rightdestinyoficial?igsh=MWh2MTZtcWE3ZzBwaA%3D%3D&utm_source=qr">
+					<span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Informação</h2>
+              <ul class="list-unstyled">
+                <li><a href="about.html" class="py-2 d-block">Sobre</a></li>
+                <li><a href="#" class="py-2 d-block">Serviço</a></li>
+                <li><a href="#" class="py-2 d-block">Termos e Condições</a></li>
+                <li><a href="#" class="py-2 d-block">Torne-se um Parceiro</a></li>
+                <li><a href="#" class="py-2 d-block">Garantia do Melhor Preço</a></li>
+                <li><a href="#" class="py-2 d-block">Privacidade e Política</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Suporte ao Cliente</h2>
+              <ul class="list-unstyled">
+                <li><a href="about.html" class="py-2 d-block">Perguntas Frequentes</a></li>
+                <li><a href="#" class="py-2 d-block">Opções de Pagamento</a></li>
+                <li><a href="#" class="py-2 d-block">Dicas de Reserva</a></li>
+                <li><a href="#" class="py-2 d-block">Como Funciona</a></li>
+                <li><a href="#" class="py-2 d-block">Fale Conosco</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Tem alguma dúvida?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">R. Camélia 26, Jardim das Flores, Osasco, Brasil</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+11 99999 9999</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">Sac@RightDestiny.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+		<!-- Fim do rodapé -->
+
+  <!-- Scripts JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/range.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>

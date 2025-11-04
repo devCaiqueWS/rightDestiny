@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RightDestiny</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fontes do Google -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+
+	<!-- Estilos e bibliotecas externas -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <!-- Navbar (menu superior) -->  
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">RightDestiny.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+		  <!-- Links do menu -->		
+          <li class="nav-item active"><a href="1index.html" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="2about.html" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="3tour.html" class="nav-link">Viagens</a></li>
+          <li class="nav-item"><a href="4hotel.html" class="nav-link">Hotéis</a></li>
+		  <!-- Ícone de favoritos -->
+          <li class="nav-item" id="menu-favoritos" style="display:flex; align-items:center; justify-content:center;">
+			<a href="6favoritos.html" class="nav-link" title="Favoritos">
+				<i class="icon-heart" style="font-size:20px; color:#ff4b5c;"></i>
+			</a>
+          </li>
+		  <li class="nav-item cta" style="display:flex; gap:4px; align-items: center; justify-content: center;" id="menu-login"><a href="5login.html" class="nav-link" ><span>Login</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    
+    <!-- Seção principal (hero/banner com imagem de fundo) -->
+    <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_1.jpg');">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-9 ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+            <h1 class="mb-4" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><strong>Explorar<br></strong> Sua cidade incrível </h1>
+            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Encontre ótimos lugares para ficar, comer e curtir</p>
+
+			<!-- Formulário de busca -->
+            <div class="block-17 my-4">
+              <form id="form-busca" action="" method="post" class="d-block d-flex">
+                <div class="fields d-block d-flex">
+
+				  <!-- Campo de texto -->	
+                  <div class="textfield-procurar one-third">
+                  	<input id="campo-busca" type="text" class="form-control" placeholder="Ex: Viagens, hoteis">
+                  </div>
+
+				  <!-- Select (lista de cidades) -->
+                  <div class="select-wrap one-third">
+                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    <select name="cidade" id="campo-cidade" class="form-control" placeholder="Keyword procurar">
+                      <option value="">Onde</option>
+                      <option value="">Itália</option>
+                      <option value="">Paris</option>
+                      <option value="">Nova York</option>
+                    </select>
+                  </div>
+                </div>
+
+				<!-- Botão de busca -->
+                <input type="submit" class="search-submit btn btn-primary" value="procurar">  
+              </form>
+            </div>
+
+			<!-- Links rápidos (categorias) -->
+            <p>Ou navegue pelos destaques</p>
+            <p class="browse d-md-flex">
+          <!-- "<span class="d-flex justify-content-md-center align-items-md-center"><a href="#"><i class="flaticon-fork"></i>Restaurante</a></span>" -->
+            	<span class="d-flex justify-content-md-center align-items-md-center"><a href="4hotel.html">
+					<i class="flaticon-hotel"></i>Hotel</a></span> 
+            	<span class="d-flex justify-content-md-center align-items-md-center"><a href="3tour.html">
+					<i class="flaticon-meeting-point"></i>Lugares</a></span> 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+	<!-- Comeco dos "Destinos em Destaque" -->
+    <section class="ftco-section ftco-destination">
+    	<div class="container">
+    		<div class="row justify-content-start mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">Todos</span>
+            <h2 class="mb-4"><strong>Destinos</strong> em destaque</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-12">
+
+					<!-- Carrossel de destinos -->
+    				<div class="destination-slider owl-carousel ftco-animate">
+
+						<!-- Cada "item" é um destino -->
+						<!-- Destino 1 -->
+						<div class="item">
+						<div class="destination" style="position: relative;">
+							<a href="ViagensParis.html" 
+							class="img d-flex justify-content-center align-items-center" 
+							style="background-image: url(images/destination-1.jpg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+							</a>
+							<div class="text p-3">
+							<h3><a href="#">Paris, França</a></h3>
+							<span class="listing">15 Listagens</span>
+							</div>
+
+							<!-- Ícone reposicionado um pouco mais para cima e para a esquerda -->
+							<i class="icon-heart" 
+							onclick="toggleFavorite(this)" 
+							style="
+								font-size: 22px; 
+								color: #ccc; 
+								cursor: pointer; 
+								transition: color 0.3s; 
+								position: absolute; 
+								bottom: 25px; 
+								right: 25px;">
+							</i>
+						</div>
+						</div>
+
+						<!-- Destino 2 -->
+						<div class="item">
+						<div class="destination" style="position: relative;">
+							<a href="ViagensItália.html" 
+							class="img d-flex justify-content-center align-items-center" 
+							style="background-image: url(images/destination-2.jpg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+							</a>
+							<div class="text p-3">
+							<h3><a href="#">Torre de Pisa, Itália</a></h3>
+							<span class="listing">20 Listagens</span>
+							</div>
+							<i class="icon-heart" 
+							onclick="toggleFavorite(this)" 
+							style="font-size:22px; color:#ccc; cursor:pointer; transition:color 0.3s; position:absolute; bottom:25px; right:25px;"></i>
+						</div>
+						</div>
+
+						<!-- Destino 3 -->
+						<div class="item">
+						<div class="destination" style="position: relative;">
+							<a href="ViagensColiseu.html" 
+							class="img d-flex justify-content-center align-items-center" 
+							style="background-image: url(images/destination-3.jpg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+							</a>
+							<div class="text p-3">
+							<h3><a href="#">Coliseu, Itália</a></h3>
+							<span class="listing">10 Listagens</span>
+							</div>
+							<i class="icon-heart" 
+							onclick="toggleFavorite(this)" 
+							style="font-size:22px; color:#ccc; cursor:pointer; transition:color 0.3s; position:absolute; bottom:25px; right:25px;"></i>
+						</div>
+						</div>
+
+						<!-- Destino 4 -->
+						<div class="item">
+						<div class="destination" style="position: relative;">
+							<a href="ViagensBasílica.html" 
+							class="img d-flex justify-content-center align-items-center" 
+							style="background-image: url(images/destination-4.jpg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+							</a>
+							<div class="text p-3">
+							<h3><a href="#">Basílica de São Pedro</a></h3>
+							<span class="listing">3 Listagens</span>
+							</div>
+							<i class="icon-heart" 
+							onclick="toggleFavorite(this)" 
+							style="font-size:22px; color:#ccc; cursor:pointer; transition:color 0.3s; position:absolute; bottom:25px; right:25px;"></i>
+						</div>
+						</div>
+
+						<!-- Destino 5 -->
+						<div class="item">
+						<div class="destination" style="position: relative;">
+							<a href="ViagensLiberdade.html" 
+							class="img d-flex justify-content-center align-items-center" 
+							style="background-image: url(images/destination-5.jpg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+							</a>
+							<div class="text p-3">
+							<h3><a href="#">Estátua da Liberdade</a></h3>
+							<span class="listing">3 Listagens</span>
+							</div>
+							<i class="icon-heart" 
+							onclick="toggleFavorite(this)" 
+							style="font-size:22px; color:#ccc; cursor:pointer; transition:color 0.3s; position:absolute; bottom:25px; right:25px;"></i>
+						</div>
+						</div>
+
+						<!-- Destino 6 -->
+						<div class="item">
+						<div class="destination" style="position: relative;">
+							<a href="ViagensMachuPicchu.html" 
+							class="img d-flex justify-content-center align-items-center" 
+							style="background-image: url(images/destination-6.jpg);">
+							<div class="icon d-flex justify-content-center align-items-center">
+								<span class="icon-search2"></span>
+							</div>
+							</a>
+							<div class="text p-3">
+							<h3><a href="#">Machu Picchu, Peru</a></h3>
+							<span class="listing">3 Listagens</span>
+							</div>
+							<i class="icon-heart" 
+							onclick="toggleFavorite(this)" 
+							style="font-size:22px; color:#ccc; cursor:pointer; transition:color 0.3s; position:absolute; bottom:25px; right:25px;"></i>
+						</div>
+						</div>
+					</div> <!-- Fim do carrossel -->
+				</div>
+			</div>
+		</div>
+	</section>
+<!-- Fim dos "Destinos em Destaque" -->
+
+<!-- Comeco dos "Principais Pacotes turisticos" -->
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-start mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">Ofertas Especiais</span>
+            <h2 class="mb-4"><strong>Principais</strong> pacotes turísticos</h2>
+          </div>
+        </div>    		
+    	</div>
+    	<div class="container-fluid">
+    		<div class="row">
+
+				<!-- Pacote 1 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="ViagensParis.html" 
+						class="img img-2 d-flex justify-content-center align-items-center" 
+						style="background-image: url(images/destination-1.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Paris</a></h3>
+
+									<!-- Estrelas de avaliação -->
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price">$360</span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<p class="days"><span>2 Dias 3 Noites</span></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> França</span> 
+    							<span class="ml-auto">
+  									<i class="icon-heart" style="font-size:22px; color:#ccc; cursor:pointer; transition:color 0.3s;" onclick="toggleFavorite(this)"></i>
+								</span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Pacote 2 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="ViagensItália.html" 
+						class="img img-2 d-flex justify-content-center align-items-center" 
+						style="background-image: url(images/destination-2.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Torre de Pisa, Itália</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price">$300</span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<p class="days"><span>2 Dias 3 Noites</span></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> USA</span> 
+    							<span class="ml-auto"><a href="#">Descobrir</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Pacote 3 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="ViagensColiseu.html" 
+						class="img img-2 d-flex justify-content-center align-items-center" 
+						style="background-image: url(images/destination-3.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Londres</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price">$280</span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<p class="days"><span>2 Dias 3 Noites</span></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Reino Unido</span> 
+    							<span class="ml-auto"><a href="#">Descobrir</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Pacote 4 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="ViagensMarinaBay.html" 
+						class="img img-2 d-flex justify-content-center align-items-center" 
+						style="background-image: url(images/destination-4.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Marina Bay</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price">$200</span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<p class="days"><span>2 Dias 3 Noites</span></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Singapura</span> 
+    							<span class="ml-auto"><a href="#">Descobrir</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Pacote 5 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="file:///C:/Users/PICHAU/Documents/IMPORTANTES/TCC-Turismo/RightDestiny/ViagensSydney.html" 
+						class="img img-2 d-flex justify-content-center align-items-center" 
+						style="background-image: url(images/destination-5.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Sydney</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price">$230</span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<p class="days"><span>2 Dias 3 Noites</span></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Austrália</span> 
+    							<span class="ml-auto"><a href="#">Descobrir</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+	<!-- Fim dos "Principais Pacotes turisticos" -->
+
+
+	<!-- Comeco dos "Quartos de hoteis populares" -->
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-start mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">Ofertas Especiais</span>
+            <h2 class="mb-4"><strong>Quartos de hotéis</strong> populares</h2>
+          </div>
+        </div>    		
+    	</div>
+    	<div class="container-fluid">
+    		<div class="row">
+
+				<!-- Hotel 1 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="HoteisBurjAlArab.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/HoteisBurjAlArab.png);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Burj Al Arab</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price per-price">$840<br><small>/noite</small></span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Dubai</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Hotel 2 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="HoteisDanieli.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/HoteisDanieli.png);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Danieli</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price per-price">$740<br><small>/noite</small></span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Veneza</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Hotel 3 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="HoteisGlace.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/HoteisGlace.png);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Glace</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price per-price">$640<br><small>/noite</small></span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Canadá</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Hotel 4 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="HoteisMarinaBay.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/HoteisMarianaBay.png);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">Marina Bay</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price per-price">$540<br><small>/noite</small></span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Singapura</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Hotel 5 -->
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="destination">
+    					<a href="HoteisThePlaza.html" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/HoteisThePlaza.png);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<div class="d-flex">
+    							<div class="one">
+		    						<h3><a href="#">The Plaza</a></h3>
+		    						<p class="rate">
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star"></i>
+		    							<i class="icon-star-o"></i>
+		    							<span>8 Avaliações</span>
+		    						</p>
+	    						</div>
+	    						<div class="two">
+	    							<span class="price per-price">$440<br><small>/noite</small></span>
+    							</div>
+    						</div>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Nova York</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+	<!-- Fim dos "Quartos de hoteis populares" -->
+
+	<!-- Comeco dos "Restaurantes populares" -->
+    <section class="ftco-section">
+    	<div class="container">
+				<div class="row justify-content-start mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate">
+          	<span class="subheading">Ofertas Especiais</span>
+            <h2 class="mb-4"><strong>Restaurantes </strong> populares</h2>
+          </div>
+        </div>    		
+    		<div class="row">
+
+				<!-- Restaurante 1 -->
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination">
+    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-1.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="#">Restaurante 1</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star-o"></i>
+    							<span>8 Avaliações</span>
+    						</p>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Lugar</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Restaurante 2 -->
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination">
+    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-2.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="#">Restaurante 2</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star-o"></i>
+    							<span>8 Avaliações</span>
+    						</p>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Lugar</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Restaurante 3 -->
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination">
+    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-3.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="#">Restaurante 3</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star-o"></i>
+    							<span>8 Avaliações</span>
+    						</p>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Lugar</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+
+				<!-- Restaurante 4 -->
+    			<div class="col-md-6 col-lg-3 ftco-animate">
+    				<div class="destination">
+    					<a href="#" class="img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/restaurant-4.jpg);">
+    						<div class="icon d-flex justify-content-center align-items-center">
+    							<span class="icon-search2"></span>
+    						</div>
+    					</a>
+    					<div class="text p-3">
+    						<h3><a href="#">Restaurante 4</a></h3>
+    						<p class="rate">
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star"></i>
+    							<i class="icon-star-o"></i>
+    							<span>8 Avaliações</span>
+    						</p>
+    						<p></p>
+    						<hr>
+    						<p class="bottom-area d-flex">
+    							<span><i class="icon-map-o"></i> Lugar</span> 
+    							<span class="ml-auto"><a href="#">Reserve</a></span>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+	<!-- Fim dos "Restaurantes populares" -->
+
+	<!-- Início do rodapé -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Rightdestiny</h2>
+              <p>Seu guia para as melhores viagens, hotéis e experiências. Seu destino começa aqui.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+				<!-- Adicionar a logo do intagram -->
+                <li class="ftco-animate"><a href="https://www.instagram.com/rightdestinyoficial?igsh=MWh2MTZtcWE3ZzBwaA%3D%3D&utm_source=qr">
+					<span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Informação</h2>
+              <ul class="list-unstyled">
+                <li><a href="about.html" class="py-2 d-block">Sobre</a></li>
+                <li><a href="#" class="py-2 d-block">Serviço</a></li>
+                <li><a href="#" class="py-2 d-block">Termos e Condições</a></li>
+                <li><a href="#" class="py-2 d-block">Torne-se um Parceiro</a></li>
+                <li><a href="#" class="py-2 d-block">Garantia do Melhor Preço</a></li>
+                <li><a href="#" class="py-2 d-block">Privacidade e Política</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Suporte ao Cliente</h2>
+              <ul class="list-unstyled">
+                <li><a href="about.html" class="py-2 d-block">Perguntas Frequentes</a></li>
+                <li><a href="#" class="py-2 d-block">Opções de Pagamento</a></li>
+                <li><a href="#" class="py-2 d-block">Dicas de Reserva</a></li>
+                <li><a href="#" class="py-2 d-block">Como Funciona</a></li>
+                <li><a href="#" class="py-2 d-block">Fale Conosco</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Tem alguma dúvida?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">R. Camélia 26, Jardim das Flores, Osasco, Brasil</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+11 99999 9999</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">Sac@RightDestiny.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+		<!-- Fim do rodapé -->
+
+  <!-- Loader de carregamento -->  
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <!-- Scripts JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    (function(){
+      const form = document.getElementById('form-busca');
+      if (!form) return;
+      const campoBusca = document.getElementById('campo-busca');
+      const campoCidade = document.getElementById('campo-cidade');
+      form.addEventListener('submit', function(){
+        try {
+          const query_text = (campoBusca?.value || '').trim();
+          const cidade = (campoCidade?.value || '').trim();
+          if (query_text || cidade) {
+            RightDestinyAPI.rdLogSearch({ query_text, cidade }).catch(()=>{});
+          }
+        } catch (_) {}
+      });
+    })();
+  </script>
+  <script >
+		const CHAVE_USUARIO = 'usuario_logado'; 
+
+		function pegarUsuario(){
+		const dadosUsuario = localStorage.getItem(CHAVE_USUARIO);
+			if(dadosUsuario != null){
+				return JSON.parse(dadosUsuario);
+			} else{
+				return null;
+			}
+		}
+		function logout(){
+		localStorage.removeItem(CHAVE_USUARIO);
+		atualizarMenu();
+		}    
+		  function atualizarMenu(){
+                const menuLogin = document.getElementById('menu-login');
+                const usuarioLogado = pegarUsuario();
+                if( usuarioLogado != null){
+                    menuLogin.innerHTML = `<a href="./index.html" class="nav-link"> ${usuarioLogado.nome} </a> 
+                    <button type="button" id="botao-sair"  style="background: #fefefe; height:fit-content; padding:10px 20px; border-radius:20px; border:none; color: #8888; cursor:pointer; ">Sair </button>`;
+                    const botaoSair = document.getElementById('botao-sair');
+                    botaoSair.addEventListener('click', logout);
+                }
+            }
+            document.addEventListener('DOMContentLoaded', atualizarMenu);       
+  </script>
+  <script>
+  function toggleFavorite(icon) {
+    // Alterna o preenchimento e cor do coração
+    if (icon.classList.contains("favorited")) {
+      icon.classList.remove("favorited");
+      icon.style.color = "#ccc"; // Coração vazio
+    } else {
+      icon.classList.add("favorited");
+      icon.style.color = "#ff4b5c"; // Coração preenchido
+    }
+  }
+</script>
+  <script>
+    // Sobrescreve toggleFavorite para persistir no backend
+    window.toggleFavorite = function(icon) {
+      const marcando = !icon.classList.contains('favorited');
+      if (marcando) {
+        icon.classList.add('favorited');
+        icon.style.color = '#ff4b5c';
+      } else {
+        icon.classList.remove('favorited');
+        icon.style.color = '#ccc';
+      }
+      try {
+        const card = icon.closest('.destination');
+        const link = card?.querySelector('a.img');
+        const title = card?.querySelector('h3 a')?.textContent?.trim() || document.title;
+        const url = link?.getAttribute('href') || location.pathname;
+        const style = link?.getAttribute('style') || '';
+        const m = style.match(/url\(([^)]+)\)/i);
+        const image_url = m ? m[1].replace(/['"]/g,'') : null;
+        const item_key = url;
+        const item_type = 'destino';
+        if (marcando) {
+          RightDestinyAPI.rdAddFavorite({ item_key, item_type, title, url, image_url }).catch(() => {
+            icon.classList.remove('favorited');
+            icon.style.color = '#ccc';
+            alert('Faça login para salvar favoritos.');
+          });
+        } else {
+          RightDestinyAPI.rdRemoveFavoriteByKey({ item_key, item_type }).catch(() => {
+            icon.classList.add('favorited');
+            icon.style.color = '#ff4b5c';
+          });
+        }
+      } catch (_) {}
+    }
+  </script>
+    
+  </body>
+</html>

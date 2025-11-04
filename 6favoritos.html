@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Favoritos - RightDestiny</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container" style="max-width:900px; margin:40px auto; padding: 0 16px;">
+      <h1>Meus favoritos</h1>
+      <p>Itens salvos na sua conta.</p>
+      <div id="msg" style="margin: 8px 0 16px; color:#666;"></div>
+      <ul id="lista" style="list-style:none; padding:0; display:grid; grid-template-columns: repeat(auto-fill, minmax(220px,1fr)); gap:16px;"></ul>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script>
+      (async function(){
+        const msg = document.getElementById('msg');
+        const ul = document.getElementById('lista');
+        const me = await RightDestinyAPI.rdMe();
+        if (!me) {
+          msg.style.color = 'red';
+          msg.textContent = 'Você precisa fazer login para ver favoritos.';
+          return;
+        }
+        msg.textContent = 'Carregando...';
+        try {
+          const { items } = await RightDestinyAPI.rdGetFavorites();
+          msg.textContent = items.length ? '' : 'Nenhum favorito ainda.';
+          for (const it of items) {
+            const li = document.createElement('li');
+            li.style.border = '1px solid #eee';
+            li.style.borderRadius = '8px';
+            li.style.overflow = 'hidden';
+            li.innerHTML = `
+              <a href="${it.url || '#'}" style="text-decoration:none; color:inherit; display:block;">
+                ${it.image_url ? `<div style=\"background:url('${it.image_url}') center/cover no-repeat; height:130px;\"></div>` : ''}
+                <div style="padding:8px 10px;">
+                  <strong>${(it.title || it.item_key || 'Item').replace(/</g,'&lt;')}</strong>
+                  <div style="font-size:12px; color:#666;">${it.item_type}</div>
+                </div>
+              </a>
+              <div style="padding: 8px 10px;">
+                <button data-id="${it.id}" style="border:1px solid #ddd; background:#fff; padding:6px 10px; border-radius:6px; cursor:pointer;">Remover</button>
+              </div>
+            `;
+            ul.appendChild(li);
+          }
+          ul.addEventListener('click', async (e) => {
+            const btn = e.target.closest('button[data-id]');
+            if (!btn) return;
+            btn.disabled = true;
+            try {
+              await RightDestinyAPI.rdRemoveFavorite(btn.getAttribute('data-id'));
+              btn.closest('li').remove();
+            } catch (err) {
+              alert(err.message || 'Erro ao remover');
+              btn.disabled = false;
+            }
+          });
+        } catch (err) {
+          msg.style.color = 'red';
+          msg.textContent = err.message || 'Erro ao carregar favoritos';
+        }
+      })();
+    </script>
+  </body>
+  </html>
