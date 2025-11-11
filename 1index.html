@@ -46,6 +46,8 @@
           <li class="nav-item"><a href="2about.html" class="nav-link">Sobre</a></li>
           <li class="nav-item"><a href="3tour.html" class="nav-link">Viagens</a></li>
           <li class="nav-item"><a href="4hotel.html" class="nav-link">Hotéis</a></li>
+          <li class="nav-item"><a href="4hotel.html" class="nav-link">Hotéis</a></li>
+          <li class="nav-item"><a href="10contato.html" class="nav-link">Afiliados</a></li>
 		  <!-- Ícone de favoritos -->
           <li class="nav-item" id="menu-favoritos" style="display:flex; align-items:center; justify-content:center;">
 			<a href="6favoritos.html" class="nav-link" title="Favoritos">
@@ -893,32 +895,6 @@
     })();
   </script>
   <script >
-		const CHAVE_USUARIO = 'usuario_logado'; 
-
-		function pegarUsuario(){
-		const dadosUsuario = localStorage.getItem(CHAVE_USUARIO);
-			if(dadosUsuario != null){
-				return JSON.parse(dadosUsuario);
-			} else{
-				return null;
-			}
-		}
-		function logout(){
-		localStorage.removeItem(CHAVE_USUARIO);
-		atualizarMenu();
-		}    
-		  function atualizarMenu(){
-                const menuLogin = document.getElementById('menu-login');
-                const usuarioLogado = pegarUsuario();
-                if( usuarioLogado != null){
-                    menuLogin.innerHTML = `<a href="./index.html" class="nav-link"> ${usuarioLogado.nome} </a> 
-                    <button type="button" id="botao-sair"  style="background: #fefefe; height:fit-content; padding:10px 20px; border-radius:20px; border:none; color: #8888; cursor:pointer; ">Sair </button>`;
-                    const botaoSair = document.getElementById('botao-sair');
-                    botaoSair.addEventListener('click', logout);
-                }
-            }
-            document.addEventListener('DOMContentLoaded', atualizarMenu);       
-  </script>
   <script>
   function toggleFavorite(icon) {
     // Alterna o preenchimento e cor do coração

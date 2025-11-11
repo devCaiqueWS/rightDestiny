@@ -278,7 +278,38 @@
 	};
 	contentWayPoint();
 
+	// RightDestiny: ajustes globais de navegação
+	(function(){
+		function swapLogin(){
+			var li = document.getElementById('menu-login');
+			if (!li) return;
+			var hasToken = !!localStorage.getItem('rd_token');
+			li.innerHTML = hasToken
+				? '<a href="9perfil.html" class="nav-link" title="Perfil"><i class="icon-user" style="font-size:20px; color:inherit;"></i></a>'
+				: '<a href="5login.html" class="nav-link"><span>Login</span></a>';
+		}
 
+		function ensureAffiliatesLink(){
+			var nav = document.querySelector('#ftco-nav .navbar-nav');
+			if (!nav) return;
+			var exists = Array.prototype.slice.call(nav.querySelectorAll('a[href]')).some(function(a){
+				var h = a.getAttribute('href') || '';
+				return /10contato\.html$/.test(h);
+			});
+			if (!exists) {
+				var li = document.createElement('li');
+				li.className = 'nav-item';
+				li.innerHTML = '<a href="10contato.html" class="nav-link">Afiliados</a>';
+				var before = document.getElementById('menu-favoritos');
+				if (before && before.parentNode === nav) nav.insertBefore(li, before); else nav.appendChild(li);
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', function(){
+			swapLogin();
+			ensureAffiliatesLink();
+		});
+	})();
 	
 	var OnePageNav = function() {
 		$(".smoothscroll[href^='#'], #ftco-nav ul li a[href^='#']").on('click', function(e) {
