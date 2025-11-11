@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>RightDestiny — Perfil</title>
+
+    <!-- Fontes -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet" />
+
+    <!-- Estilos do projeto -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .perfil-container { display:flex; justify-content:center; align-items:center; min-height:70vh; padding:40px 20px; }
+      .perfil-card { width:100%; max-width:520px; background:#fff; border-radius:14px; padding:28px; box-shadow:0 12px 30px rgba(0,0,0,0.08); text-align:center; }
+      .perfil-icone { width:96px; height:96px; margin:0 auto 18px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:linear-gradient(135deg,#eaf2ff,#f5f9ff); border:2px solid rgba(26,115,232,0.12); }
+      .perfil-icone svg { width:54px; height:54px; fill:#1a73e8; }
+      .perfil-nome { font-size:1.4rem; font-weight:700; color:#111; margin-bottom:4px; }
+      .perfil-email { font-size:.95rem; color:#666; margin-bottom:25px; }
+      .perfil-secao { text-align:left; margin-top:25px; }
+      .perfil-secao h3 { font-size:1.1rem; color:#1a73e8; margin-bottom:10px; }
+      .perfil-secao p { background:#f9f9f9; border-radius:10px; padding:12px 15px; color:#444; font-size:.93rem; }
+      .perfil-actions { display:flex; gap:10px; justify-content:center; margin-top:25px; }
+      .btn-perfil { padding:10px 18px; border-radius:10px; border:none; font-weight:600; cursor:pointer; }
+      .btn-sair { background:#1a73e8; color:#fff; }
+      @media (max-width:600px){ .perfil-card{padding:18px;} .perfil-icone{width:84px;height:84px;} }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="1index.html">RightDestiny.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="1index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="2about.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="3tour.html" class="nav-link">Viagens</a></li>
+            <li class="nav-item"><a href="4hotel.html" class="nav-link">Hotéis</a></li>
+            <li class="nav-item"><a href="6favoritos.html" class="nav-link" title="Favoritos"><i class="icon-heart" style="color:#ff4b5c;"></i></a></li>
+            <li class="nav-item"><a href="8carrinho.html" class="nav-link" title="Carrinho"><i class="icon-shopping-cart" style="color:#ffc107;"></i></a></li>
+            <li class="nav-item cta" id="menu-login"><a href="5login.html" class="nav-link"><span>Login</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <section class="ftco-section perfil-container">
+      <div class="perfil-card">
+        <div class="perfil-icone">
+          <svg viewBox="0 0 24 24"><path d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5zm0 2c-3.866 0-7 3.134-7 7 0 .552.448 1 1 1h12c.552 0 1-.448 1-1 0-3.866-3.134-7-7-7z"/></svg>
+        </div>
+        <h2 class="perfil-nome" id="nome-usuario">Carregando...</h2>
+        <div class="perfil-email" id="email-usuario"></div>
+        <div class="perfil-secao">
+          <h3>Favoritos</h3>
+          <p>Gerencie seus itens salvos na página de favoritos.</p>
+        </div>
+        <div class="perfil-secao">
+          <h3>Carrinho</h3>
+          <p>Acesse o carrinho para revisar suas seleções.</p>
+        </div>
+        <div class="perfil-actions">
+          <button class="btn-perfil btn-sair" id="btn-sair">Sair</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">RightDestiny</h2>
+              <p>Seu guia para as melhores viagens, hotéis e experiências. Seu destino começa aqui.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.instagram.com/rightdestinyoficial?igsh=MWh2MTZtcWE3ZzBwaA%3D%3D&utm_source=qr" target="_blank"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts essenciais -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+      (function(){
+        const nomeEl = document.getElementById('nome-usuario');
+        const emailEl = document.getElementById('email-usuario');
+        const btnSair = document.getElementById('btn-sair');
+
+        function logout(){
+          localStorage.removeItem('rd_token');
+          window.location.href = '5login.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+          try {
+            const me = await RightDestinyAPI.rdMe();
+            if (!me) { window.location.href = '5login.html'; return; }
+            nomeEl.textContent = me.name || me.nome || 'Usuário';
+            emailEl.textContent = me.email || '';
+          } catch (_) {
+            window.location.href = '5login.html';
+          }
+        });
+        btnSair && btnSair.addEventListener('click', logout);
+
+        function atualizarMenuLogin(){
+          const menuLogin = document.getElementById('menu-login');
+          if (!menuLogin) return;
+          const temToken = !!localStorage.getItem('rd_token');
+          menuLogin.innerHTML = temToken
+            ? '<a href="9perfil.html" class="nav-link" title="Perfil"><i class="icon-user" style="font-size:20px; color:inherit;"></i></a>'
+            : '<a href="5login.html" class="nav-link"><span>Login</span></a>';
+        }
+        document.addEventListener('DOMContentLoaded', atualizarMenuLogin);
+      })();
+    </script>
+  </body>
+</html>
+

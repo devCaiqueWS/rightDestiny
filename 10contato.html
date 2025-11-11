@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Afiliados - RightDestiny</title>
+
+    <!-- Fontes do Google (mesmas do site) -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet" />
+
+    <!-- Estilos e bibliotecas externas (mesmas do site) -->
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css" />
+    <link rel="stylesheet" href="css/jquery.timepicker.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      .afiliado-card { background:#fff; border-radius:12px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.06); }
+      #formAfiliado .form-control { border-radius:8px; padding:12px 14px; }
+      #formAfiliado .btn-primary { border-radius:10px; padding:12px 28px; font-weight:700; }
+      @media (max-width: 576px) { .afiliado-card { padding:16px; } }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar (igual ao restante do site) -->
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="1index.html">RightDestiny.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="1index.html" class="nav-link">Início</a></li>
+            <li class="nav-item"><a href="2about.html" class="nav-link">Sobre</a></li>
+            <li class="nav-item"><a href="3tour.html" class="nav-link">Viagens</a></li>
+            <li class="nav-item"><a href="4hotel.html" class="nav-link">Hotéis</a></li>
+            <li class="nav-item"><a href="8calculadora.html" class="nav-link">Cálculo de Viagem</a></li>
+            <li class="nav-item active"><a href="10contato.html" class="nav-link">Afiliados</a></li>
+            <li class="nav-item cta" id="menu-login"><a href="5login.html" class="nav-link"><span>Login</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <section class="ftco-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+            <span class="subheading">Parcerias</span>
+            <h2 class="mb-4">Seja um Parceiro do RightDestiny</h2>
+            <p>Cadastre sua empresa (hotel, restaurante ou ponto turístico) para aparecer na nossa plataforma e alcançar mais viajantes.</p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-md-8 ftco-animate">
+            <div class="afiliado-card">
+              <form id="formAfiliado" class="contact-form">
+                <div class="form-group">
+                  <label for="nomeEmpresa">Nome da Empresa</label>
+                  <input type="text" id="nomeEmpresa" class="form-control" placeholder="Ex: Hotel Paraíso" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Tipo de Negócio</label>
+                  <div class="d-flex flex-wrap">
+                    <div class="form-check mr-4 mb-2">
+                      <input class="form-check-input tipo-negocio" type="checkbox" id="hotel" value="Hotel / Pousada">
+                      <label class="form-check-label" for="hotel">Hotel / Pousada</label>
+                    </div>
+                    <div class="form-check mr-4 mb-2">
+                      <input class="form-check-input tipo-negocio" type="checkbox" id="restaurante" value="Restaurante">
+                      <label class="form-check-label" for="restaurante">Restaurante</label>
+                    </div>
+                    <div class="form-check mb-2">
+                      <input class="form-check-input tipo-negocio" type="checkbox" id="ponto_turistico" value="Ponto Turístico">
+                      <label class="form-check-label" for="ponto_turistico">Ponto Turístico</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">E-mail de Contato</label>
+                  <input type="email" id="email" class="form-control" placeholder="exemplo@empresa.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="telefone">Telefone</label>
+                  <input type="tel" id="telefone" class="form-control" placeholder="(xx) xxxxx-xxxx" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="mensagem">Mensagem (opcional)</label>
+                  <textarea id="mensagem" rows="5" class="form-control" placeholder="Fale um pouco sobre o seu serviço, local, e condições de parceria"></textarea>
+                </div>
+
+                <div class="form-group text-center mt-4">
+                  <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">RightDestiny</h2>
+              <p>Seu guia para as melhores viagens, hotéis e experiências. Seu destino começa aqui.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://www.instagram.com/rightdestinyoficial?igsh=MWh2MTZtcWE3ZzBwaA%3D%3D&utm_source=qr" target="_blank"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen">
+      <svg class="circular" width="48px" height="48px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+      </svg>
+    </div>
+
+    <!-- SCRIPTS (ordem do projeto) -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Atualiza menu (login -> ícone) com rd_token -->
+    <script>
+      (function(){
+        function replaceMenu(){
+          const li = document.getElementById('menu-login');
+          if (!li) return;
+          const hasToken = !!localStorage.getItem('rd_token');
+          li.innerHTML = hasToken
+            ? '<a href="9perfil.html" class="nav-link" title="Perfil"><i class="icon-user" style="font-size:20px; color:inherit;"></i></a>'
+            : '<a href="5login.html" class="nav-link"><span>Login</span></a>';
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+          replaceMenu();
+          const obs = new MutationObserver(replaceMenu);
+          obs.observe(document.body, { childList:true, subtree:true });
+          setTimeout(() => obs.disconnect(), 3000);
+        });
+      })();
+    </script>
+
+    <!-- Script de envio (local) do formulário de afiliados -->
+    <script>
+      (function(){
+        const form = document.getElementById('formAfiliado');
+        form && form.addEventListener('submit', function(e){
+          e.preventDefault();
+          const tipos = Array.from(document.querySelectorAll('.tipo-negocio:checked')).map(i => i.value);
+          const data = {
+            nomeEmpresa: document.getElementById('nomeEmpresa').value.trim(),
+            tipo: tipos.join(', '),
+            email: document.getElementById('email').value.trim(),
+            telefone: document.getElementById('telefone').value.trim(),
+            mensagem: document.getElementById('mensagem').value.trim(),
+            enviadoEm: new Date().toISOString()
+          };
+          const key = 'afiliados_enviados_v1';
+          const lista = JSON.parse(localStorage.getItem(key) || '[]');
+          lista.push(data);
+          localStorage.setItem(key, JSON.stringify(lista));
+          alert('Sua solicitação de afiliação foi enviada com sucesso! Entraremos em contato em breve.');
+          form.reset();
+        });
+      })();
+    </script>
+  </body>
+</html>
+
