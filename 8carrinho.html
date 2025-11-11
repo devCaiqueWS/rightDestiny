@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>RightDestiny - Carrinho</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="1index.html">RightDestiny.</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a href="1index.html" class="nav-link">Início</a></li>
+          <li class="nav-item"><a href="2about.html" class="nav-link">Sobre</a></li>
+          <li class="nav-item"><a href="3tour.html" class="nav-link">Viagens</a></li>
+          <li class="nav-item"><a href="4hotel.html" class="nav-link">Hotéis</a></li>
+          <li class="nav-item" id="menu-favoritos" style="display:flex; align-items:center; justify-content:center;">
+            <a href="6favoritos.html" class="nav-link" title="Favoritos">
+              <i class="icon-heart" style="font-size:20px; color:#ff4b5c;"></i>
+            </a>
+          </li>
+          <li class="nav-item" id="menu-carrinho" style="display:flex; align-items:center; justify-content:center;">
+            <a href="8carrinho.html" class="nav-link" title="Carrinho">
+              <i class="ion-android-cart" style="font-size:20px;"></i>
+              <span class="cart-count" style="margin-left:6px; background:#ff4b5c; color:#fff; border-radius:10px; padding:2px 6px; font-size:12px;">0</span>
+            </a>
+          </li>
+          <li class="nav-item cta" style="display:flex; gap:4px; align-items: center; justify-content: center;" id="menu-login"><a href="5login.html" class="nav-link" ><span>Login</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-wrap js-fullheight" style="background-image: url('images/bg_2.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
+        <div class="col-md-9 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
+          <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Seu Carrinho</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ftco-section ftco-degree-bg">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="bg-light p-4" style="border-radius:10px;">
+            <div id="cart-items"></div>
+            <hr>
+            <div class="d-flex align-items-center justify-content-between">
+              <div style="font-size:18px; font-weight:600;">Total: <span id="cart-total">R$ 0,00</span></div>
+              <div class="d-flex" style="gap:8px;">
+                <button id="cart-clear" class="btn btn-outline-secondary">Limpar carrinho</button>
+                <button id="cart-checkout" class="btn btn-primary">Finalizar compra</button>
+              </div>
+            </div>
+            <p style="margin-top:10px; color:#666; font-size:14px;">O carrinho é salvo automaticamente no seu navegador.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Rightdestiny</h2>
+            <p>Seu guia para as melhores viagens, hotéis e experiências. Seu destino começa aqui.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="https://www.instagram.com/rightdestinyoficial?igsh=MWh2MTZtcWE3ZzBwaA%3D%3D&utm_source=qr"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script>
+    // Checkout básico (placeholder)
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.getElementById('cart-checkout');
+      if (btn){
+        btn.addEventListener('click', function(){
+          alert('Obrigado! Esta é uma demonstração. Integre um gateway de pagamento aqui.');
+        });
+      }
+    });
+  </script>
+  <script>
+    const CHAVE_USUARIO = 'usuario_logado'; 
+    function pegarUsuario(){
+      const dadosUsuario = localStorage.getItem(CHAVE_USUARIO);
+      if(dadosUsuario != null){ return JSON.parse(dadosUsuario); }
+      return null;
+    }
+    function logout(){ localStorage.removeItem(CHAVE_USUARIO); atualizarMenu(); }
+    function atualizarMenu(){
+      const menuLogin = document.getElementById('menu-login');
+      const usuarioLogado = pegarUsuario();
+      if( usuarioLogado != null){
+        menuLogin.innerHTML = `<a href="./index.html" class="nav-link"> ${usuarioLogado.nome} </a> 
+          <button type="button" id="botao-sair"  style="background: #fefefe; height:fit-content; padding:10px 20px; border-radius:20px; border:none; color: #8888; cursor:pointer; ">Sair </button>`;
+        const botaoSair = document.getElementById('botao-sair');
+        botaoSair.addEventListener('click', logout);
+      }
+    }
+    document.addEventListener('DOMContentLoaded', atualizarMenu);
+  </script>
+  </body>
+  </html>
+

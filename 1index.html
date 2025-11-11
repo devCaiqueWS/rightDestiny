@@ -52,7 +52,13 @@
 				<i class="icon-heart" style="font-size:20px; color:#ff4b5c;"></i>
 			</a>
           </li>
-		  <li class="nav-item cta" style="display:flex; gap:4px; align-items: center; justify-content: center;" id="menu-login"><a href="5login.html" class="nav-link" ><span>Login</span></a></li>
+          <li class="nav-item" id="menu-carrinho" style="display:flex; align-items:center; justify-content:center;">
+            <a href="8carrinho.html" class="nav-link" title="Carrinho">
+              <i class="ion-android-cart" style="font-size:20px;"></i>
+              <span class="cart-count" style="margin-left:6px; background:#ff4b5c; color:#fff; border-radius:10px; padding:2px 6px; font-size:12px;">0</span>
+            </a>
+          </li>
+          <li class="nav-item cta" style="display:flex; gap:4px; align-items: center; justify-content: center;" id="menu-login"><a href="5login.html" class="nav-link" ><span>Login</span></a></li>
         </ul>
       </div>
     </div>
@@ -868,6 +874,7 @@
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
   <script src="js/api.js"></script>
+  <script src="js/cart.js"></script>
   <script>
     (function(){
       const form = document.getElementById('form-busca');
